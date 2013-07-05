@@ -106,7 +106,7 @@ Monit
 ## service defined in this file has errors. Alerts may be restricted on 
 ## events by using a filter as in the second example below. 
 #
-#set alert aniket@gslab.com                       # receive all alerts
+set alert rahuls@gslab.com                       # receive all alerts
 # set alert manager@foo.bar only on { timeout }  # receive just service-
 #                                                # timeout alert
 #
@@ -200,98 +200,98 @@ check process rabbitmq with pidfile /var/run/rabbitmq/pid
    if 5 restarts within 5 cycles then alert
 
 #check program keystone with path "/var/run/check_keyst_working.sh"
-check program keystone with path "/etc/init.d/keystone_status"
+check program keystone with path "/etc/monit/scripts/check_keyst_working.sh"
    group keystone
    start program = "/etc/init.d/keystone start"
    stop program = "/etc/init.d/keystone stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program quantum-server with path "/var/run/check_quantum_working.sh"
+check program quantum-server with path "/etc/monit/scripts/check_quantum_working.sh"
    group quantum-server
    start program = "/etc/init.d/quantum-server start"
    stop program = "/etc/init.d/quantum-server stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program quantum-dhcp-agent with path "/var/run/check_quantum_dhcp_working.sh"
+check program quantum-dhcp-agent with path "/etc/monit/scripts/check_quantum_dhcp_working.sh"
    group quantum-dhcp-agent
    start program = "/etc/init.d/quantum-dhcp-agent start"
    stop program = "/etc/init.d/quantum-dhcp-agent stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program quantum-l3-agent with path "/var/run/check_quantum_l3_working.sh"
+check program quantum-l3-agent with path "/etc/monit/scripts/check_quantum_l3_working.sh"
    group quantum-l3-agent
    start program = "/etc/init.d/quantum-l3-agent start"
    stop program = "/etc/init.d/quantum-l3-agent stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program quantum-metadata-agent with path "/var/run/check_quantum_metadata_working.sh"
+check program quantum-metadata-agent with path "/etc/monit/scripts/check_quantum_metadata_working.sh"
    group quantum-metadata-agent
    start program = "/etc/init.d/quantum-metadata-agent start"
    stop program = "/etc/init.d/quantum-metadata-agent stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program quantum-plugin-openvswitch-agent with path "/var/run/check_quantum_openvswitch_agent_working.sh"
+check program quantum-plugin-openvswitch-agent with path "/etc/monit/scripts/check_quantum_openvswitch_agent_working.sh"
    group quantum-openvswitch-agent
    start program = "/etc/init.d/quantum-plugin-openvswitch-agent start"
    stop program = "/etc/init.d/quantum-plugin-openvswitch-agent stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program nova-api with path "/var/run/check_novaapi_working.sh"
+check program nova-api with path "/etc/monit/scripts/check_novaapi_working.sh"
    group nova-api
    start program = "/etc/init.d/nova-api start"
    stop program = "/etc/init.d/nova-api stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program nova-cert with path "/var/run/check_novacert_working.sh"
+check program nova-cert with path "/etc/monit/scripts/check_novacert_working.sh"
    group nova-cert
    start program = "/etc/init.d/nova-cert start"
    stop program = "/etc/init.d/nova-cert stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program nova-conductor with path "/var/run/check_novaconductor_working.sh"
+check program nova-conductor with path "/etc/monit/scripts/check_novaconductor_working.sh"
    group nova-conductor
    start program = "/etc/init.d/nova-conductor start"
    stop program = "/etc/init.d/nova-conductor stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program nova-consoleauth with path "/var/run/check_novaconsoleauth_working.sh"
+check program nova-consoleauth with path "/etc/monit/scripts/check_novaconsoleauth_working.sh"
    group nova-consoleauth
    start program = "/etc/init.d/nova-consoleauth start"
    stop program = "/etc/init.d/nova-consoleauth stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program nova-novncproxy with path "/var/run/check_novanovncproxy_working.sh"
+check program nova-novncproxy with path "/etc/monit/scripts/check_novanovncproxy_working.sh"
    group nova-novncproxy
    start program = "/etc/init.d/nova-novncproxy start"
    stop program = "/etc/init.d/nova-novncproxy stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program nova-scheduler with path "/var/run/check_novascheduler_working.sh"
+check program nova-scheduler with path "/etc/monit/scripts/check_novascheduler_working.sh"
    group nova-scheduler
    start program = "/etc/init.d/nova-scheduler start"
    stop program = "/etc/init.d/nova-scheduler stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program cinder-api with path "/var/run/check_cinderapi_working.sh"
+check program cinder-api with path "/etc/monit/scripts/check_cinderapi_working.sh"
    group cinder-api
    start program = "/etc/init.d/cinder-api start"
    stop program = "/etc/init.d/cinder-api stop"
    if status > 0 then restart
    if 5 restarts within 5 cycles then alert
 
-check program cinder-scheduler with path "/var/run/check_cinderscheduler_working.sh"
+check program cinder-scheduler with path "/etc/monit/scripts/check_cinderscheduler_working.sh"
    group cinder-scheduler
    start program = "/etc/init.d/cinder-scheduler start"
    stop program = "/etc/init.d/cinder-scheduler stop"
