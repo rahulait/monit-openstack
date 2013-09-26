@@ -5,3 +5,6 @@ ps -ef | grep nova-compute | grep -v grep | grep -v defunc
 
 # Optional approach:-
 #ps -ef | grep n[o]va-compute
+
+#Optional 2nd approach
+#pgrep nova-compute
